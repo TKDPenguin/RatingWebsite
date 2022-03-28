@@ -12,14 +12,14 @@
 
 <body>
   <div class="section">
-    <h4>List of Rated Things:</h4>
+    <h4>Rated Things:</h4>
     <table class="centered">
       <thead class="blue lighten-4">
         <tr>
           <th>Name</th>
           <th>Rating</th>
           <th>Description</th>
-          <th>Edit</th>
+          <th>Details</th>
           <th>Delete</th>
         </tr>
       </thead>
@@ -28,14 +28,14 @@
           <td>Jack</td>
           <td>0/10</td>
           <td>He is a terrible friend who is not supportive and is not fun to talk to.</td>
-          <td><a class="waves-effect waves-light btn">Edit</a></td>
+          <td><a class="waves-effect waves-light btn">Info/Edit</a></td>
           <td><a class="waves-effect waves-light btn red">Delete</a></td>
         </tr>
         <tr>
           <td>Parth</td>
           <td>10/10</td>
           <td>Amazing friend who is amazing and is always supportive no matter what.</td>
-          <td><a class="waves-effect waves-light btn">Edit</a></td>
+          <td><a class="waves-effect waves-light btn">Info/Edit</a></td>
           <td><a class="waves-effect waves-light btn red">Delete</a></td>
         </tr>
       </tbody>
@@ -44,11 +44,20 @@
   <div class="section">
     <div class="container">
       <h4>Rate New Items:</h4>
-      <form>
+      <form class="row">
         <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+          <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate">
+          <label for="first_name">Name</label>
         </div>
+        <div class="input-field col s6">
+          <input placeholder="0/10" id="rating" type="text" class="validate">
+          <label for="rating">Rating</label>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="He is a terrible friend who is not supportive and is not fun to talk to." id="description" type="text" class="validate">
+          <label for="description">Rating</label>
+        </div>
+        <button class="btn waves-effect waves-light"><i class="material-icons right">send</i>Submit</button>
       </form>
     </div>
   </div>

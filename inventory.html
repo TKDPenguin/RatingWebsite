@@ -8,6 +8,7 @@
   <title>Inventory</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="C:\Users\tkdpe\Downloads\IntroToWebApp\styles\style.css">
 </head>
 
 <body>
@@ -46,22 +47,27 @@
       <h4>Rate New Items:</h4>
       <form class="row">
         <div class="input-field col s6">
-          <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate">
+          <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate" style="margin-top: 2%;">
           <label for="first_name">Name</label>
         </div>
         <div class="input-field col s6">
-          <input placeholder="0/10" id="rating" type="text" class="validate">
-          <label for="rating">Rating</label>
+          <form action="#">
+            <p class="range-field">
+              <label for="slider" id="slider_num" class="slider_num">Rating: 5/10</label>
+              <input type="range" id="slider" min="0" max="10"/>
+            </p>
+          </form>
         </div>
         <div class="input-field col s12">
           <input placeholder="He is a terrible friend who is not supportive and is not fun to talk to." id="description" type="text" class="validate">
-          <label for="description">Rating</label>
+          <label for="description">Description</label>
         </div>
         <button class="btn waves-effect waves-light"><i class="material-icons right">send</i>Submit</button>
       </form>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 
 </html>

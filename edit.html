@@ -7,6 +7,7 @@
     <title>Edit</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="container">
@@ -39,12 +40,16 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate" value="Jack" required>
+              <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate" value="Jack" required style="margin-top: 2.5%;">
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate" placeholder="0/10" value="0/10" required>
-              <label for="last_name">Last Name</label>
+              <form action="#">
+                <p class="range-field">
+                  <label for="slider" id="slider_num">Rating: 5/10</label>
+                  <input type="range" id="slider" min="0" max="10"/>
+                </p>
+              </form>
             </div>
             <div class="input-field col s12">
               <input placeholder="" id="description" type="text" class="validate" value="He is a terrible friend who is not supportive and is not fun to talk to." required>
@@ -63,5 +68,6 @@
       var elems = document.querySelectorAll('.modal');
       var instances = M.Modal.init(elems);
     });</script>
+    <script src="scripts/slider.js"></script>
 </body>
 </html>

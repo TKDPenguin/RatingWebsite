@@ -6,3 +6,14 @@
   font-size: large;
   font-weight: bolder;
 }
+
+#slider_num {
+  font-size:large;
+  font-weight: bolder;
+  color:lightseagreen;
+  margin-top: 0%;
+  padding: 0;
+}
+#slider {
+  margin-top: 0%;
+}

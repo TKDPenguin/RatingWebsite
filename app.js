@@ -2,6 +2,13 @@
 const express = require( "express" );
 const app = express();
 const port = 8080;
+const logger = require("morgan");
+
+// define middleware that logs all incoming requests
+app.use(logger("dev"));
+
+// new middleware that serves static resources in the public directory
+app.use(express.static(__dirname + '/public'))
 
 // define a route for the default home page
 app.get( "/", ( req, res ) => {

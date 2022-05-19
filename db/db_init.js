@@ -23,25 +23,25 @@ db.execute(create_ratings_table_sql);
 /**** Create some sample items ****/
 
 const insert_ratings_table_sql = `
-    INSERT INTO stuff 
+    INSERT INTO ratings 
         (name, rating, description) 
     VALUES 
         (?, ?, ?);
 `
 db.execute(insert_ratings_table_sql, ['Jack', '5/10', 'He is a terrible friend who is not supportive and is not fun to talk to.']);
 
-db.execute(insert_ratings_table_sql, ['Parth', '10/10', null]);
+db.execute(insert_ratings_table_sql, ['Parth', '10/10', 'He is a very good friend who is very supportive and not like Jack.']);
 
 /**** Read the sample items inserted ****/
 
-const read_ratings_table_sql = "SELECT * FROM stuff";
+const read_ratings_table_sql = "SELECT * FROM ratings";
 
 db.execute(read_ratings_table_sql, 
     (error, results) => {
         if (error) 
             throw error;
 
-        console.log("Table 'stuff' initialized with:")
+        console.log("Table 'ratings' initialized with:")
         console.log(results);
     }
 );

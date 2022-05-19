@@ -25,44 +25,36 @@
         </tr>
       </thead>
       <tbody>
+        <% for(let i = 0; i < stuff.length; i++){ %> 
+          <% console.log(stuff) %> 
         <tr>
-          <td>Jack</td>
-          <td>0/10</td>
-          <td>He is a terrible friend who is not supportive and is not fun to talk to.</td>
-          <td><a class="waves-effect waves-light btn" href="/inventory/edit"><i class="material-icons right">edit</i>Info/Edit</a></td>
-          <td><a class="waves-effect waves-light btn red"><i class="material-icons right">delete</i>Delete</a></td>
+          <td><%= stuff[i].name %></td>
+          <td><%= stuff[i].rating %></td>
+          <td><%= stuff[i].description %></td>
+          <td><a class="waves-effect waves-light btn" href="/inventory/edit/<%=stuff[i].id%>"><i class="material-icons right">edit</i>Info/Edit</a></td>
+          <td><a class="waves-effect waves-light btn red" href="/inventory/edit/<%=stuff[i].id%>/delete"><i class="material-icons right">delete</i>Delete</a></td>
         </tr>
-        <tr>
-          <td>Parth</td>
-          <td>10/10</td>
-          <td>Amazing friend who is amazing and is always supportive no matter what.</td>
-          <td><a class="waves-effect waves-light btn" href="/inventory/edit"><i class="material-icons right">edit</i>Info/Edit</a></td>
-          <td><a class="waves-effect waves-light btn red"><i class="material-icons right">delete</i>Delete</a></td>
-        </tr>
+        <% } %>
       </tbody>
     </table>
   </div>
   <div class="section">
     <div class="container">
       <h4>Rate New Items:</h4>
-      <form class="row">
+      <form class="row" method="post">
         <div class="input-field col s6">
-          <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" type="text" class="validate" style="margin-top: 2%;">
+          <input placeholder="Jack Joseph Crowely (ATCS 2025)" id="first_name" name='name' type="text" class="validate" style="margin-top: 2%;">
           <label for="first_name">Name</label>
         </div>
         <div class="input-field col s6">
-          <form action="#">
-            <p class="range-field">
-              <label for="slider" id="slider_num" class="slider_num">Rating: 5/10</label>
-              <input type="range" id="slider" min="0" max="10"/>
-            </p>
-          </form>
+          <input placeholder="0/10" id="rating" name='rating' type="text" class="validate" style="margin-top: 2%;">
+          <label for="rating">Rating</label>
         </div>
         <div class="input-field col s12">
-          <input placeholder="He is a terrible friend who is not supportive and is not fun to talk to." id="description" type="text" class="validate">
+          <input placeholder="He is a terrible friend who is not supportive and is not fun to talk to." id="description" name='description' type="text" class="validate">
           <label for="description">Description</label>
         </div>
-        <button class="btn waves-effect waves-light"><i class="material-icons right">send</i>Submit</button>
+        <button class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>Submit</button>
       </form>
     </div>
   </div>

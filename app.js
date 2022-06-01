@@ -4,7 +4,7 @@ const res = require("express/lib/response");
 const app = express();
 const port = 8080;
 const logger = require("morgan");
-const db = require("./db/db_connection");
+const db = require("./db/db_pool");
 
 // COnfigure express to parse URL-encoded POST request bodies
 app.use(express.urlencoded({extended : false}))

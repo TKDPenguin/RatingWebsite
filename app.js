@@ -2,7 +2,7 @@
 const express = require( "express" );
 const res = require("express/lib/response");
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 const logger = require("morgan");
 const db = require("./db/db_pool");
 

@@ -11,6 +11,7 @@ db.execute(drop_ratings_table_sql);
 
 const create_ratings_table_sql = `
     CREATE TABLE ratings (
+        email VARCHAR(45) NULL,
         id INT NOT NULL AUTO_INCREMENT,
         name VARCHAR(45) NOT NULL,
         rating VARCHAR(5) NOT NULL,
